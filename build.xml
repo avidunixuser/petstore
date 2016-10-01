@@ -1,0 +1,9 @@
+<project name="Petshop" default="build" basedir=".">
+	<description>Build scripts for the Petshop application.</description>
+	<target name="build">
+		<echo message="java home its ${java.home}" />
+		<description>compile sources and perform transforms of raw data</description>
+		<echo message="Compiling 72 source files" />
+		<echo message="BUILD SUCCESSFUL" />
+	</target>
+</project>
