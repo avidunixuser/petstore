@@ -1,5 +1,5 @@
 FROM jlthorpe73/jetty-base
-MAINTAINER Jonathan Thorpe "jon.thorpe@gmail.com"
+MAINTAINER Nitin Pathak "avidunixuser@gmail.com"
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD p4.pp /tmp/p4.pp
 #ADD jpetstore-supervisor.pp /tmp/jpetstore-supervisor.pp
