@@ -1,10 +1,12 @@
 FROM jlthorpe73/jetty-base
 MAINTAINER Nitin Pathak "avidunixuser@gmail.com"
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-ADD p4.pp /tmp/p4.pp
+#ADD p4.pp /tmp/p4.pp
+ADD git.pp /tmp/git.pp
 #ADD jpetstore-supervisor.pp /tmp/jpetstore-supervisor.pp
 RUN service jetty stop
-CMD ["/usr/local/bin/puppet","apply","/tmp/p4.pp"]
+#CMD ["/usr/local/bin/puppet","apply","/tmp/p4.pp"]
+CMD ["/usr/local/bin/puppet","apply","/tmp/git.pp"]
 
 RUN echo 'root:screencast' | chpasswd
 #RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
